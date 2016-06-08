@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.descendants * { 
-    display: block;
-    border: 4px solid lightgrey;
-    color: lightgrey;
-    padding: 5px;
-    margin: 15px;
-}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-var $element = $(".assetTitle");
-    return $element.prev().css({"color": "red", "border": "2px solid red"});
-});
-<script>
-function myFunction() {
-    return Math.PI;
-}
-
-document.getElementById("demo").innerHTML = myFunction();
-
-</script>
-
-</head>
-
-test
-
-<body class="descendants">body (great-grandparent)
-  <div style="width:500px;">div (grandparent)
-    <ul>ul (direct parent)  
-      <li>li (child)
-        <span>span (grandchild)</span>
-      </li>
-<li>
-<span class="assetDateType">Webinar | May 18, 2016</span>
-<span class="assetTitle"><a href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=455074" target="_self">What Makes a Good Software Architect?</a></span>
-<span class="assetAuthor"><a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=3659" target="_self">Ipek Ozkaya</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=455090" target="_self">Andrew Kotov</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=3271" target="_self">John Klein</a></span>
-<p>In this webinar, SEI researchers and an industry colleague discussed in two talks What Makes a Good Software Architect?</p>
-</li>
-<li>
-<span class="assetDateType">Conference Paper | May 16, 2016</span>
-<span class="assetTitle"><a href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=454876" target="_self">A Reference Architecture for Big Data Systems in the National Security Domain</a></span>
-<span class="assetAuthor"><a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=3271" target="_self">John Klein</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=454881" target="_self">Ross Buglak (Data to Decisions Cooperative Research Centre)</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=454882" target="_self">David Blockow (Data to Decisions Cooperative Research Centre)</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=454883" target="_self">Troy Wuttke (Data to Decisions Cooperative Research Centre)</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=454884" target="_self">Brenton Cooper (Data to Decisions Cooperative Research Centre)</a></span>
-<p>This paper presents a reference architecture for big data systems that is focused on addressing typical national defense requirements and that is vendor-neutral.</p>
-</li>
-      <li>li (child2)
-        <span>span (grandchild)</span
-      </li>
-    </ul>   
-  </div>
-</body>
-
+    <head>
+        <style>
+            .descendants * {
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                              $("button").click(function(){
+                                                var $element = $(".assetTitle");
+                                                var $testVar = $element.prev();
+                                                var $textVar = $testVar.text();
+                                                $("h1").text($textVar);
+                                                $element.prev().css({"color": "red", "border": "2px         solid red"});
+                                                });
+                              });
+            </script>
+    </head>
+    
+    
+    
+    <body class="descendants">body (great-grandparent)
+        <div style="width:500px;">div (grandparent)
+            <ul>ul (direct parent)
+                <li>li (child)
+                    <span>span (grandchild)</span>
+                </li>
+                <li>
+                    <span class="assetDateType">Webinar | May 18, 2016</span>
+                    <span class="assetTitle"><a href="http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=455074" target="_self">What Makes a Good Software Architect?</a></span>
+                    <span class="assetAuthor"><a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=3659" target="_self">Ipek Ozkaya</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=455090" target="_self">Andrew Kotov</a>, <a href="http://resources.sei.cmu.edu/library/author.cfm?authorid=3271" target="_self">John Klein</a></span>
+                    <p>In this webinar, SEI researchers and an industry colleague discussed in two talks What Makes a Good Software Architect?</p>
+                </li>
+                
+                <li>li (child2)
+                    <span>span (grandchild)</span
+                        </li>
+                        </ul>   
+        </div>
+        
+        <button>asdf</button>
+        
+        <h1>return text here</h1>
+    </body>
+    
 </html>
